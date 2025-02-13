@@ -1,0 +1,117 @@
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10000;
+}
+.header__logo {
+  padding-top: 15px;
+  padding-left: 8%;
+  width: 80%;
+  position: absolute;
+}
+.header__logo img {
+  width: 500px;
+}
+/*                   */
+/* nav               */
+/*                   */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* right: 0; */
+  width: 50%;
+  height: 1200px;
+  background-image: url(../img/bgi_hamburger.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  transition: right 0.3s ease; /* スライドインのアニメーション */
+
+  z-index: 10000;
+}
+.header__menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+/* メニューが開いているとき */
+.menu.open {
+  right: 0;
+}
+
+.hamburger {
+  position: fixed;
+  top: 17px;
+  right: 25px;
+  width: 50px;
+  /* cursor: pointer; */
+  z-index: 10000;
+}
+
+.hamburger span {
+  color: #fff;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  margin: 15px 0;
+  /* transition: 0.4s; */
+}
+
+/* バツ印に変化するスタイル */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(16px, -16px);
+}
+
+/* メニューリストのスタイル */
+.nav__list {
+  margin: 25% auto;
+}
+.nav__list a {
+  color: #fff;
+  font-family: "Yusei Magic", serif;
+  font-size: 3.2rem;
+}
+.nav__list li {
+  &:nth-child(6) {
+    p {
+      padding-bottom: 100px;
+    }
+  }
+  &:nth-child(7) {
+    padding-bottom: 25px;
+    a {
+      font-size: 3.6rem;
+    }
+  }
+  &:nth-child(8) {
+    a {
+      font-size: 2rem;
+      color: #464646;
+    }
+  }
+}
+
+.nav__lead {
+  color: #464646;
+  font-size: 1.8rem;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+.nav__list p {
+  color: #464646;
+  font-size: 1.8rem;
+  /* padding-top: 15px; */
+}
+.nav__tel {
+  margin: 15px 0;
+}

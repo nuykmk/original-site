@@ -1,0 +1,172 @@
+// スクロールイン
+.scroll_fadein {
+  opacity: 0;
+}
+.fadein_animation_start {
+  // キーフレームアニメーションを指定
+  animation-name: fadein_animation;
+  // アニメーションの開始時間の遅延
+  animation-delay: 0.3s;
+  // アニメーションの時間を指定
+  animation-duration: 1.5s;
+  //アニメーション再生後のスタイルを指定
+  animation-fill-mode: both;
+}
+@keyframes fadein_animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.slideup {
+  transform: translateY(50px);
+}
+.slidedown {
+  transform: translateY(-50px);
+}
+.slideright {
+  transform: translateX(100px);
+}
+.slideleft {
+  transform: translateX(-100px);
+}
+
+// バルーン
+@keyframes floatUpTop {
+  from {
+    transform: translateY(0);
+    // opacity: 1;
+  }
+  to {
+    transform: translateY(-1200px);
+    // opacity: 0;
+  }
+}
+@keyframes floatUpMiddle {
+  from {
+    transform: translateY(0);
+    // opacity: 1;
+  }
+  to {
+    transform: translateY(-2000px);
+    // opacity: 0;
+  }
+}
+@keyframes floatUpBottom {
+  from {
+    transform: translateY(0);
+    // opacity: 1;
+  }
+  to {
+    transform: translateY(-3500px);
+    // opacity: 0;
+  }
+}
+@keyframes fadeInOUt {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+// News
+.balloon_1 {
+  position: absolute;
+  width: 100px;
+  top: 50px;
+  left: 50px;
+  z-index: 6;
+  animation: 10s floatUpTop 4s ease-in-out infinite;
+}
+// Feature
+.balloon_2 {
+  width: 200px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  z-index: 4;
+
+  animation: 15s floatUpMiddle 2s ease-in-out infinite;
+  // animation-delay: 2s;
+}
+//Greeting
+.balloon_3 {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: 2;
+  animation: 20s floatUpBottom 0.5s ease-in-out infinite;
+}
+.balloon_4 {
+  width: 100px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  z-index: 2;
+  animation: 30s floatUpBottom 1s ease-in-out infinite;
+}
+// .balloon_4_stop {
+//   width: 100px;
+//   position: absolute;
+//   top: 50px;
+//   right: 30px;
+//   z-index: 2;
+//   animation: 30s fadeInOUt 2s ease-in-out infinite;
+// }
+.balloon_5 {
+  width: 120px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  z-index: 6;
+  animation: 30s floatUpBottom 1.5s ease-in-out infinite;
+}
+
+// Access
+.balloon_6 {
+  width: 120px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  z-index: 6;
+  animation: 25s floatUpMiddle 1s ease-in-out infinite;
+}
+.balloon_7 {
+  width: 100px;
+  position: absolute;
+  bottom: -350px;
+  right: 30px;
+  z-index: 6;
+  animation: 30s floatUpBottom 1.5s ease-in-out infinite;
+}
+
+// 気球
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+  position: absolute;
+  top: 15px;
+  left: 15%;
+  width: 150px;
+  z-index: 2;
+}

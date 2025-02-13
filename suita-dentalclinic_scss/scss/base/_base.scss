@@ -1,0 +1,41 @@
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Zen Maru Gothic", serif;
+  color: #464646;
+  & p {
+    line-height: 3rem;
+  }
+}
+.title {
+  font-family: "Yusei Magic", serif;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 500;
+}
+
+.heading {
+  color: #45afd8;
+  font-size: 8rem;
+}
+.lead {
+  /* color: #464646; */
+  font-size: 2.4rem;
+}
+.flex__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}

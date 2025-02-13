@@ -1,0 +1,446 @@
+/* MV */
+.catchphrase {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+  z-index: 20;
+}
+
+.slide__1 {
+  background-image: url(../img/mv_slide_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 1200px;
+}
+.slide__2 {
+  background-image: url(../img/mv_slide_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% top;
+
+  height: 1200px;
+}
+.slide__3 {
+  background-image: url(../img/mv_slide_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  height: 1200px;
+}
+.slide__4 {
+  background-image: url(../img/mv_slide_5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  height: 1200px;
+}
+
+/* mvスライドショー */
+.slideshow__container {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  /* max-width: 1100px; */
+  margin: auto;
+  overflow: hidden;
+  // z-index: 5;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1200px;
+  opacity: 0;
+  visibility: visible; /* 常に表示状態（opacityで表示・非表示を制御） */
+  transition: opacity 2s ease-in-out; /* opacity の遷移 */
+}
+
+.active {
+  opacity: 1; /* 表示中のスライド */
+  /* visibility: visible; */
+  transition: opacity 2s ease-in-out; /* 透明度の遷移 */
+}
+
+/* NEWS */
+.news {
+  background-image: url(../img/bgi_suisai2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  position: relative;
+}
+.news__title {
+  font-family: "Yusei Magic", serif;
+  text-align: center;
+  position: relative;
+  z-index: 500;
+}
+
+.news__contents {
+  align-items: center;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.news__list {
+  font-family: "Yusei Magic", serif;
+  width: 75%;
+  position: relative;
+  z-index: 500;
+
+  & li {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    align-items: center;
+    padding-bottom: 40px;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+  & span {
+    font-size: 1.8rem;
+  }
+  & em {
+    font-size: 1.8rem;
+    font-style: normal;
+    background-color: #fafabb;
+    width: 180px;
+    padding: 5px 5px;
+    border-radius: 20px;
+    /* margin: 0 10%; */
+    text-align: center;
+  }
+  & p {
+    font-size: 2rem;
+  }
+}
+
+/* Feature */
+.feature {
+  position: relative;
+  z-index: 5;
+}
+.feature__item {
+  display: flex;
+  position: relative;
+  margin-bottom: 50px;
+}
+.feature__item--right {
+  flex-direction: row-reverse;
+}
+.item__title {
+  color: #45afd8;
+  font-size: 2.4rem;
+  padding-bottom: 30px;
+  font-weight: bold;
+  // line-height: 2.5rem;
+}
+.item__text {
+  /* color: #464646; */
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.feature__box {
+  background-image: url(../img/bgi_suisai2_small.png);
+  border-radius: 20px;
+  width: 85%;
+  height: auto;
+  min-height: 436px;
+  max-height: 440px;
+  padding: 5% 4% 5% 42%;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 5;
+}
+.box {
+  // position: absolute;
+  z-index: 5;
+}
+.feature__box--right {
+  padding: 5% 42% 5% 4%;
+  left: 0;
+}
+.feature__img {
+  width: 54%;
+  height: auto;
+
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 6;
+  padding-bottom: 20%;
+
+  & img {
+    border-radius: 20px;
+    z-index: 20;
+    position: relative;
+  }
+}
+
+/* Medical */
+
+.medical__item__title {
+  color: #45afd8;
+  font-size: 2.2rem;
+  padding: 15px 0;
+  font-weight: bold;
+}
+.medical__item__text {
+  /* color: #464646; */
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: left;
+}
+
+.medical {
+  position: relative;
+  background-image: url(../img/bgi_suisai2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  height: auto;
+}
+.medical__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  gap: 60px 1%;
+  padding-bottom: 105px;
+  position: relative;
+  z-index: 7;
+}
+.medical__item {
+  background-color: rgba($color: #fff, $alpha: 0.7);
+  border-radius: 20px;
+  width: 230px;
+  /* min-width: 100px;
+  max-width: 250px; */
+  min-height: 320px;
+  padding: 20px 15px;
+}
+.medical__item__list {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 15px;
+  line-height: 1.6;
+}
+
+// Greeting
+.greeting {
+  position: relative;
+}
+.greeting__item {
+  display: flex;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 50px;
+}
+
+.greeting__textbox {
+  background-image: url(../img/bgi_suisai2.png);
+  background-position: left bottom;
+  border-radius: 20px;
+  width: 90%;
+  height: auto;
+  min-height: 436px;
+  padding: 4% 38% 4% 4%;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  z-index: 1;
+
+  .greeting__text {
+    font-size: 2.2rem;
+    padding-bottom: 30px;
+  }
+  .greeting__name {
+    font-size: 3rem;
+    .greeting__name__clinic {
+      font-size: 2.2rem;
+      padding-right: 15px;
+    }
+    .greeting__name__carr {
+      font-size: 1.8rem;
+      padding-right: 15px;
+    }
+  }
+}
+.greeting__img {
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 2;
+  margin-bottom: 200px;
+  position: relative;
+  right: 0;
+  width: 45%;
+
+  & img {
+    width: 100%;
+    height: 606px;
+    object-fit: cover;
+    object-position: 90% 0;
+    border-radius: 20px;
+  }
+}
+
+// scroll
+
+.scroll {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* スライド外の画像は隠す */
+  margin: auto;
+  white-space: nowrap;
+  background-image: url(../img/bgi_suisai2.png);
+}
+.scroll__container {
+  display: flex;
+  width: 200%;
+  animation: scroll 30s linear infinite; /* 横スクロールアニメーション */
+}
+
+.scroll__item {
+  flex: 0 0 auto; /*横並びに固定*/
+  width: 300px;
+}
+.scroll__item img {
+  width: 98%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* scrollアニメーション */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+// Access
+.access {
+  position: relative;
+  background-image: url(../img/bgi_suisai2.png);
+  background-position: left bottom;
+  font-family: "Yusei Magic", serif;
+  text-align: center;
+  padding-bottom: 100px;
+  .access__flex {
+    gap: 3%;
+  }
+}
+.access__item__left,
+.access__item__right {
+  background-color: rgba($color: #fff, $alpha: 0.7);
+  border-radius: 20px;
+  padding: 30px;
+  width: 47%;
+}
+
+// left
+.access__item__left {
+  .access__logo img {
+    padding-bottom: 25px;
+  }
+  .access__address {
+    .tel {
+      font-size: 3rem;
+      padding-bottom: 5px;
+    }
+    .address {
+      font-size: 2rem;
+      padding-bottom: 15px;
+    }
+  }
+}
+
+// table
+.table__wrapper {
+  border: #464646 1px solid;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.schedule__table {
+  width: 100%;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  text-align: center;
+
+  tr {
+    &:nth-child(1) {
+      background-color: #45afd8;
+      color: #fff;
+      th,
+      td {
+        border-right: #fff 1px solid;
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+    &:nth-child(2) {
+      td {
+        color: #45afd8;
+      }
+    }
+    &:nth-child(3) {
+      border-top: #464646 1px dashed;
+      td {
+        color: #45afd8;
+      }
+    }
+  }
+  th {
+    width: 30%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  td {
+    padding: 10px 0;
+  }
+}
+
+.schedule__note {
+  font-size: 1.8rem;
+  padding-top: 10px;
+}
+
+// right
+.access__item__right {
+  position: relative;
+  z-index: 8;
+
+  .access__mapArea {
+    position: relative;
+
+    .access__map {
+      width: 100%;
+      iframe {
+        width: 100%;
+      }
+    }
+    .access__map__btn {
+      position: absolute;
+      right: 50px;
+      bottom: 10px;
+    }
+  }
+  .access__guide {
+    padding-top: 30px;
+    font-size: 1.8rem;
+    text-align: left;
+    li {
+      padding-bottom: 10px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

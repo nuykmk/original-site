@@ -1,0 +1,53 @@
+.footer {
+  font-family: "Yusei Magic", serif;
+  color: #fff;
+
+  .footer__nav {
+    font-size: 1.8rem;
+    background-image: url(../img/bgi_suisai3.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    // min-height: 300px;
+  }
+  .footer__end {
+    background-color: #45afd8;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 30px 0;
+  }
+}
+.footer__flex__item {
+  justify-content: space-around;
+  align-items: center;
+}
+.footer__nav__left {
+  width: 22%;
+  li {
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer__nav__medical {
+  width: 78%;
+  display: flex;
+}
+.footer__nav__medical_item {
+  width: 50%;
+  padding-left: 40px;
+  p {
+    margin-bottom: 15px;
+  }
+}
+.footer__nav__medical__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer__nav__medical__list > li {
+  min-width: calc((100% - 10px) / 2);
+  margin-bottom: 10px;
+}
