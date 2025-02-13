@@ -1,0 +1,390 @@
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: "Zen Maru Gothic", serif;
+  color: #464646;
+  & p {
+    line-height: 3rem;
+  }
+}
+.title {
+  font-family: "Yusei Magic", serif;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.heading {
+  color: #45afd8;
+  font-size: 8rem;
+}
+.lead {
+  /* color: #464646; */
+  font-size: 2.4rem;
+}
+.flex__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3%;
+}
+
+/*                   */
+/* header            */
+/*                   */
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+}
+.header__logo {
+  padding-top: 15px;
+  padding-left: 8%;
+  width: 80%;
+  position: absolute;
+}
+.header__logo img {
+  width: 500px;
+}
+/*                   */
+/* nav               */
+/*                   */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  /* right: 0; */
+  width: 50%;
+  height: 1200px;
+  background-image: url(../img/bgi_hamburger.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  transition: right 0.3s ease; /* スライドインのアニメーション */
+
+  z-index: 10;
+}
+.header__menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+/* メニューが開いているとき */
+.menu.open {
+  right: 0;
+}
+
+.hamburger {
+  position: fixed;
+  top: 17px;
+  right: 25px;
+  width: 50px;
+  /* cursor: pointer; */
+  z-index: 20;
+}
+
+.hamburger span {
+  color: #fff;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  margin: 15px 0;
+  /* transition: 0.4s; */
+}
+
+/* バツ印に変化するスタイル */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(16px, -16px);
+}
+
+/* メニューリストのスタイル */
+.nav__list {
+  margin: 25% auto;
+}
+.nav__list a {
+  color: #fff;
+  font-family: "Yusei Magic", serif;
+  font-size: 3.2rem;
+}
+.nav__lead {
+  color: #464646;
+  font-size: 1.8rem;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+.nav__list p {
+  color: #464646;
+  font-size: 1.8rem;
+  /* padding-top: 15px; */
+}
+.nav__tel {
+  margin: 15px 0;
+}
+
+/* MV */
+.catchphrase {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%);
+}
+
+.slide__1 {
+  background-image: url(../img/mv_slide_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 1200px;
+}
+.slide__2 {
+  background-image: url(../img/mv_slide_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  height: 1200px;
+}
+.slide__3 {
+  background-image: url(../img/mv_slide_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  height: 1200px;
+}
+.slide__4 {
+  background-image: url(../img/mv_slide_5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  height: 1200px;
+}
+
+/* mvスライドショー */
+.slideshow__container {
+  position: relative;
+  width: 100%;
+  height: 1200px;
+  /* max-width: 1100px; */
+  margin: auto;
+  overflow: hidden;
+  z-index: 10;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1200px;
+  opacity: 0;
+  visibility: visible; /* 常に表示状態（opacityで表示・非表示を制御） */
+  transition: opacity 2s ease-in-out; /* opacity の遷移 */
+}
+
+.active {
+  opacity: 1; /* 表示中のスライド */
+  /* visibility: visible; */
+  transition: opacity 2s ease-in-out; /* 透明度の遷移 */
+}
+
+/* NEWS */
+.news {
+  background-image: url(../img/bgi_suisai2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  /* object-fit: cover; */
+}
+.news__title {
+  font-family: "Yusei Magic", serif;
+  text-align: center;
+}
+
+.news__contents {
+  align-items: center;
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+.news__list {
+  font-family: "Yusei Magic", serif;
+  /* color: #464646; */
+  width: 75%;
+
+  & li {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    align-items: center;
+    padding-bottom: 40px;
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+  & span {
+    font-size: 1.8rem;
+  }
+  & em {
+    font-size: 1.8rem;
+    font-style: normal;
+    background-color: #fafabb;
+    width: 180px;
+    padding: 5px 5px;
+    border-radius: 20px;
+    /* margin: 0 10%; */
+    text-align: center;
+  }
+  & p {
+    font-size: 2rem;
+  }
+}
+
+.balloon_1 img {
+  position: absolute;
+  width: 100px;
+  top: 1400px;
+  left: 50px;
+}
+
+/* Feature */
+.feature {
+  position: relative;
+}
+.feature__item {
+  display: flex;
+  /* margin: 0 auto; */
+  /* justify-content: space-between; */
+  position: relative;
+}
+.feature__item--right {
+  flex-direction: row-reverse;
+}
+.item__title {
+  color: #45afd8;
+  font-size: 2.4rem;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+.item__text {
+  /* color: #464646; */
+  font-size: 1.8rem;
+  /* line-height: 2.5rem; */
+}
+.feature__box {
+  background-image: url(../img/bgi_suisai2_small.png);
+  border-radius: 20px;
+  width: 85%;
+  height: auto;
+  min-height: 436px;
+  padding: 5% 4% 5% 42%;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  z-index: 11;
+  /* animation: slideInRight 3s both; */
+}
+.feature__box--right {
+  padding: 5% 42% 5% 4%;
+  left: 0;
+}
+.feature__img {
+  /* position: relative; */
+  /* bottom: 50px; */
+  /* transform: translate(-50%, -50%); */
+  /* border-radius: 20px; */
+  width: 54%;
+  height: auto;
+
+  object-fit: cover;
+  overflow: hidden;
+  z-index: 16;
+  margin-bottom: 200px;
+  /* animation: slideInLeft 3s both; */
+  & img {
+    border-radius: 20px;
+    z-index: 20;
+    position: relative;
+  }
+}
+.floating {
+  animation: float 3s ease-in-out infinite;
+  position: absolute;
+  top: 15px;
+  left: 250px;
+  width: 150px;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.balloon_2 {
+  width: 200px;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+/* Medical */
+
+.medical__item__title {
+  color: #45afd8;
+  font-size: 2.2rem;
+  padding: 15px 0;
+  font-weight: bold;
+}
+.medical__item__text {
+  /* color: #464646; */
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: left;
+}
+
+.medical {
+  background-image: url(../img/bgi_suisai2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  height: auto;
+}
+.medical__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  gap: 60px 1%;
+  padding-bottom: 105px;
+}
+.medical__item {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 230px;
+  /* min-width: 100px;
+  max-width: 250px; */
+  min-height: 320px;
+  padding: 20px 15px;
+}
+.medical__item__list {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 15px;
+  line-height: 1.6;
+}
