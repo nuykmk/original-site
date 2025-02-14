@@ -260,6 +260,7 @@ body p {
   width: 75%;
   position: relative;
   z-index: 500;
+  padding-left: 2%;
 }
 .news__list li {
   display: flex;
@@ -297,6 +298,10 @@ body p {
 .feature__item {
   display: flex;
   position: relative;
+  margin-bottom: 30px;
+  min-height: 550px;
+}
+.feature__item:nth-child(2) {
   margin-bottom: 50px;
 }
 
@@ -323,7 +328,7 @@ body p {
   width: 85%;
   height: auto;
   min-height: 436px;
-  max-height: 440px;
+  max-height: 500px;
   padding: 5% 4% 5% 42%;
   position: absolute;
   right: 0;
@@ -347,7 +352,6 @@ body p {
      object-fit: cover;
   overflow: hidden;
   z-index: 6;
-  padding-bottom: 20%;
 }
 .feature__img img {
   border-radius: 20px;
@@ -414,7 +418,8 @@ body p {
   display: flex;
   position: relative;
   z-index: 5;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  min-height: 900px;
 }
 
 .greeting__textbox {
@@ -424,7 +429,7 @@ body p {
   width: 90%;
   height: auto;
   min-height: 436px;
-  padding: 4% 38% 4% 4%;
+  padding: 5% 38% 5% 4%;
   position: absolute;
   left: 0;
   top: 30px;
@@ -449,9 +454,7 @@ body p {
 .greeting__img {
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
   z-index: 2;
-  margin-bottom: 200px;
   position: relative;
   right: 0;
   width: 45%;
@@ -668,18 +671,23 @@ body p {
   margin-bottom: 10px;
 }
 
-.scroll_fadein {
+.feature__item,
+.greeting__item {
+  overflow: hidden;
+}
+
+.scroll_fadeIn {
   opacity: 0;
 }
 
-.fadein_animation_start {
-  animation-name: fadein_animation;
+.fadeIn_animation_start {
+  animation-name: fadeIn_animation;
   animation-delay: 0.3s;
   animation-duration: 1.5s;
   animation-fill-mode: both;
 }
 
-@keyframes fadein_animation {
+@keyframes fadeIn_animation {
   0% {
     opacity: 0;
   }
@@ -688,20 +696,20 @@ body p {
     transform: translate(0);
   }
 }
-.slideup {
+.slideUp {
   transform: translateY(50px);
 }
 
-.slidedown {
+.slideDown {
   transform: translateY(-50px);
 }
 
-.slideright {
-  transform: translateX(100px);
+.slideRight {
+  transform: translateX(200px);
 }
 
-.slideleft {
-  transform: translateX(-100px);
+.slideLeft {
+  transform: translateX(-200px);
 }
 
 @keyframes floatUpTop {

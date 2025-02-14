@@ -1,10 +1,14 @@
 // スクロールイン
-.scroll_fadein {
+.feature__item,
+.greeting__item {
+  overflow: hidden;
+}
+.scroll_fadeIn {
   opacity: 0;
 }
-.fadein_animation_start {
+.fadeIn_animation_start {
   // キーフレームアニメーションを指定
-  animation-name: fadein_animation;
+  animation-name: fadeIn_animation;
   // アニメーションの開始時間の遅延
   animation-delay: 0.3s;
   // アニメーションの時間を指定
@@ -12,7 +16,7 @@
   //アニメーション再生後のスタイルを指定
   animation-fill-mode: both;
 }
-@keyframes fadein_animation {
+@keyframes fadeIn_animation {
   0% {
     opacity: 0;
   }
@@ -21,17 +25,18 @@
     transform: translate(0);
   }
 }
-.slideup {
+.slideUp {
   transform: translateY(50px);
 }
-.slidedown {
+.slideDown {
   transform: translateY(-50px);
 }
-.slideright {
-  transform: translateX(100px);
+.slideRight {
+  transform: translateX(200px); // calc(50vw + 50%)
 }
-.slideleft {
-  transform: translateX(-100px);
+
+.slideLeft {
+  transform: translateX(-200px); //calc(-50vw - 50%)
 }
 
 // バルーン

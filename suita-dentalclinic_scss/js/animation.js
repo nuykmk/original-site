@@ -8,7 +8,7 @@ function showNextSlide() {
   index = (index + 1) % slides.length; // 次のスライドに進む（ループ）0余り１
   slides[index].classList.add("active"); // 新しいスライドを表示
 }
-setInterval(showNextSlide, 3000); // 3秒ごとにスライドを切り替える
+setInterval(showNextSlide, 4000); // 3秒ごとにスライドを切り替える
 
 // ハンバーガーメニュー
 $(function () {
@@ -32,10 +32,10 @@ $(function () {
   $(window).scroll(function () {
     var windowHeight = $(window).height(),
       scrollY = $(window).scrollTop();
-    $(".scroll_fadein").each(function () {
+    $(".scroll_fadeIn").each(function () {
       var thisPosition = $(this).offset().top;
       if (scrollY > thisPosition - windowHeight) {
-        $(this).addClass("fadein_animation_start");
+        $(this).addClass("fadeIn_animation_start");
       }
     });
   });
