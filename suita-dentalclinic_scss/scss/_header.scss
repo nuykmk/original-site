@@ -22,12 +22,12 @@
   right: -100%;
   /* right: 0; */
   width: 50%;
-  height: 1200px;
+  height: 100vh;
   background-image: url(../img/bgi_hamburger.png);
   background-repeat: no-repeat;
   text-align: center;
   transition: right 0.3s ease; /* スライドインのアニメーション */
-
+  overflow: auto;
   z-index: 10000;
 }
 .header__menu {
@@ -53,7 +53,7 @@
 .hamburger span {
   color: #fff;
   display: block;
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: #fff;
   margin: 15px 0;
@@ -69,7 +69,7 @@
   opacity: 0;
 }
 .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(16px, -16px);
+  transform: rotate(-45deg) translate(14px, -14px);
 }
 
 /* メニューリストのスタイル */
@@ -78,25 +78,26 @@
 }
 .nav__list a {
   color: #fff;
-  font-family: "Yusei Magic", serif;
-  font-size: 3.2rem;
+  font-family: 'Yusei Magic', serif;
+  font-size: 2.8rem;
 }
 .nav__list li {
   &:nth-child(6) {
     p {
-      padding-bottom: 100px;
+      padding-bottom: 50px;
     }
   }
   &:nth-child(7) {
     padding-bottom: 25px;
     a {
-      font-size: 3.6rem;
+      font-size: 2.8rem;
     }
   }
   &:nth-child(8) {
     a {
-      font-size: 2rem;
+      font-size: 1.8rem;
       color: #464646;
+      padding-bottom: 15px;
     }
   }
 }
@@ -104,13 +105,12 @@
 .nav__lead {
   color: #464646;
   font-size: 1.8rem;
-  padding-top: 5px;
-  padding-bottom: 30px;
+
+  padding-bottom: 25px;
 }
 .nav__list p {
   color: #464646;
   font-size: 1.8rem;
-  /* padding-top: 15px; */
 }
 .nav__tel {
   margin: 15px 0;

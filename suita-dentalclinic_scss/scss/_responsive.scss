@@ -1,2 +1,695 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
+  .wrapper {
+    padding: 0 10%;
+  }
+  .menu {
+    .header__menu {
+      width: 90px;
+    }
+    .hamburger {
+      top: 10px;
+      right: 20px;
+    }
+  }
+
+  .catchphrase {
+    width: 50%;
+    top: 50%;
+    left: 5%;
+    transform: translate(-5%, -50%);
+  }
+
+  // ---------------------
+  // News
+  // --------------------
+  .news__contents {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  // ---------------------
+  // Feature
+  // --------------------
+
+  .feature__item {
+    margin-bottom: 30px;
+    height: 550px;
+
+    .feature__box {
+      height: 470px;
+    }
+  }
+  // ---------------------
+  // Greeting
+  // --------------------
+
+  .greeting__item {
+    height: 920px;
+  }
+
+  // ---------------------
+  // Access
+  // --------------------
+  .access__flex {
+    flex-direction: column;
+
+    .access__item__left,
+    .access__item__right {
+      width: 90%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 8;
+    }
+
+    .access__item__left {
+      margin-bottom: 50px;
+    }
+  }
+  // ---------------------
+  // footer
+  // --------------------
+
+  .footer__nav__medical__list > li {
+    min-width: calc((100% - 150px) / 2);
+    margin-bottom: 10px;
+  }
+  .footer__nav__medical_item {
+    width: 75%;
+  }
+  .footer__nav__medical__list {
+    gap: 10px 40px;
+  }
+
+  // ---------------------
+  // balloon
+  // --------------------
+
+  .floating_1 {
+    top: 30px;
+    left: 10%;
+    width: 120px;
+  }
+  .floating_2 {
+    top: 30px;
+    left: 10%;
+    width: 120px;
+  }
+  .balloon_2 {
+    width: 180px;
+  }
+  .balloon_3 {
+    width: 180px;
+  }
+  .balloon_5 {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    padding: 0 8%;
+  }
+  // ---------------------
+  // header
+  // --------------------
+
+  .title {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .heading {
+      font-size: 6.4rem;
+    }
+    .lead {
+      font-size: 2rem;
+    }
+  }
+  .item__title {
+    font-size: 2.2rem;
+  }
+  // ---------------------
+  // MV
+  // --------------------
+  .header__logo {
+    padding-left: 5%;
+    width: 70%;
+  }
+
+  // ---------------------
+  // News
+  // --------------------
+  .news__contents {
+    padding-top: 0;
+    padding-bottom: 70px;
+    flex-direction: column;
+    .news__list {
+      width: 100%;
+
+      li {
+        gap: 10% 5%;
+        padding-bottom: 25px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+      em {
+        font-size: 1.6rem;
+        width: 200px;
+        padding: 12px 5px;
+        border-radius: 20px;
+      }
+      .news__text {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  // ---------------------
+  // Feature
+  // --------------------
+
+  .feature__item {
+    flex-direction: column;
+    height: 700px;
+    margin-bottom: 50px;
+
+    .feature__img {
+      width: 80%;
+    }
+
+    .feature__box {
+      width: 90%;
+      padding: 25% 5% 4% 5%;
+      top: 230px;
+    }
+  }
+
+  .feature__item--right {
+    .feature__img {
+      margin-left: auto;
+    }
+  }
+
+  // ---------------------
+  // Greeting
+  // --------------------
+  .greeting__item {
+    flex-direction: column-reverse;
+    height: 1150px;
+
+    .greeting__img {
+      width: 80%;
+      margin: 0 auto;
+      & img {
+        height: 500px;
+      }
+    }
+    .greeting__textbox {
+      width: 100%;
+      padding: 35% 5% 5% 5%;
+      left: 0;
+      top: 350px;
+      .greeting__text {
+        font-size: 2rem;
+      }
+    }
+  }
+  // ---------------------
+  // scroll
+  // --------------------
+
+  .scroll__item {
+    width: 250px;
+    img {
+      height: 225px;
+    }
+  }
+  // ---------------------
+  // footer
+  // --------------------
+  .footer__nav__medical_item {
+    width: 100%;
+  }
+  .balloon_7 {
+    bottom: -150px;
+  }
+  .floating_3 {
+    top: 100px;
+    right: 5%;
+    width: 120px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    padding: 0 3%;
+  }
+
+  .title {
+    .heading {
+      font-size: clamp(2.2rem, 14.9vw, 6rem);
+    }
+    .lead {
+      font-size: clamp(1rem, 4.9vw, 2rem);
+    }
+  }
+  .item__title {
+    font-size: 1.8rem;
+  }
+  .item__text {
+    font-size: 1.6rem;
+  }
+
+  // ---------------------
+  // header
+  // --------------------
+
+  .header__logo {
+    padding-left: 5%;
+    padding-top: 10px;
+    width: 55%;
+  }
+  .menu {
+    width: 100%;
+    .header__menu {
+      width: 55px;
+    }
+    // .header__menu {
+    //   // position: relative;
+    // }
+    .hamburger {
+      top: 6px;
+      right: 0;
+      span {
+        width: 55%;
+        margin: 9px 8px;
+        height: 2px;
+      }
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 8px);
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+  }
+  .header__nav {
+    // position: fixed;
+
+    height: 65px;
+    // background-color: #fff;
+  }
+  .nav__lead {
+    padding-top: 0;
+    padding-bottom: 15px;
+  }
+  .nav__list a {
+    font-size: 2.2rem;
+  }
+  .nav__list li:nth-child(6) p {
+    padding-bottom: 30px;
+  }
+  .nav__list li:nth-child(7) a {
+    font-size: 2.2rem;
+    padding-bottom: 15px;
+    img {
+      width: 25px;
+    }
+  }
+  .nav__list li:nth-child(8) a {
+    font-size: 1.4rem;
+    img {
+      width: 18px;
+    }
+  }
+  .nav__list p {
+    font-size: 1.4rem;
+  }
+  // ---------------------
+  // MV
+  // --------------------
+
+  .catchphrase {
+    width: 60%;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+  }
+
+  .slide__1 {
+    background-position: center top;
+  }
+  .slide__2 {
+    background-position: 50% top;
+  }
+  .slide__3 {
+    background-position: center top;
+  }
+  .slide__4 {
+    background-position: 20% top;
+  }
+
+  // ---------------------
+  // News
+  // --------------------
+  .news__contents {
+    padding-top: 0;
+    padding-bottom: 70px;
+    flex-direction: column;
+
+    .news__list {
+      li {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      em {
+        width: 180px;
+        font-size: 1.4rem;
+        margin-left: 0;
+        padding: 8px 5px;
+      }
+    }
+  }
+
+  // ---------------------
+  // Feature
+  // --------------------
+
+  .feature__item {
+    flex-direction: column;
+    height: 600px;
+    margin-bottom: 50px;
+
+    .feature__img {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .feature__box {
+      width: 100%;
+      padding: 35% 5% 4% 5%;
+      top: 120px;
+    }
+  }
+
+  // ---------------------
+  // Medical
+  // --------------------
+  .medical__list {
+    gap: 30px 1%;
+    padding-bottom: 85px;
+
+    .medical__item {
+      width: 170px;
+      min-height: 280px;
+      padding: 15px 10px;
+      .medical__item__img {
+        width: 75%;
+        margin: 0 auto;
+      }
+      .medical__item__title {
+        font-size: 1.8rem;
+        padding: 15px 0;
+      }
+      .medical__item__text {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  // ---------------------
+  // Greeting
+  // --------------------
+  .greeting__item {
+    height: 1100px;
+
+    .greeting__img {
+      width: 80%;
+      margin: 0 auto;
+      & img {
+        height: 400px;
+      }
+    }
+    .greeting__textbox {
+      width: 100%;
+      padding: 35% 5% 5% 5%;
+      left: 0;
+      top: 300px;
+      .greeting__text {
+        font-size: 1.6rem;
+      }
+      .greeting__name {
+        font-size: 2.2rem;
+        .greeting__name__clinic {
+          font-size: 1.6rem;
+          padding-right: 15px;
+        }
+        .greeting__name__carr {
+          font-size: 1.4rem;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+  // ---------------------
+  // scroll
+  // --------------------
+
+  .scroll__item {
+    width: 150px;
+    img {
+      height: 125px;
+    }
+  }
+
+  // ---------------------
+  // Access
+  // --------------------
+
+  .access__item__left {
+    padding: 7%;
+    .access__logo {
+      width: 60%;
+      margin: 0 auto;
+    }
+    .access__address {
+      .tel {
+        font-size: 2.2rem;
+      }
+      .address {
+        font-size: 1.8rem;
+      }
+    }
+    .schedule__note {
+      font-size: 1.4rem;
+      letter-spacing: -0.1rem;
+    }
+    .schedule__table {
+      font-size: 1.6rem;
+
+      th {
+        width: 23%;
+        padding: 10px 3px;
+      }
+      tr {
+        &:nth-child(2) {
+          td {
+            padding: 20px 0;
+          }
+        }
+        &:nth-child(3) {
+          td {
+            padding: 20px 0;
+          }
+        }
+      }
+      td {
+        width: 11%;
+      }
+    }
+  }
+  .access__item__right {
+    padding: 7%;
+    .access__guide {
+      font-size: 1.6rem;
+      padding-top: 20px;
+    }
+  }
+
+  // ---------------------
+  // footer
+  // --------------------
+  .footer .footer__nav {
+    font-size: 1.6rem;
+  }
+
+  .footer__flex__item {
+    flex-direction: column;
+
+    .footer__nav__left {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .footer__nav__medical {
+      width: 100%;
+      margin-bottom: 0;
+
+      flex-direction: column;
+      .footer__nav__medical_item {
+        padding-left: 0;
+      }
+    }
+    .footer__nav__medical__list {
+      width: 100%;
+      padding-left: 15px;
+      gap: 10px 50px;
+      li {
+        min-width: calc((100% - 80px) / 2);
+      }
+    }
+  }
+
+  // ---------------------
+  // balloon
+  // --------------------
+
+  .floating_1 {
+    top: 40px;
+    left: 8%;
+    width: 80px;
+  }
+  .floating_2 {
+    top: 40px;
+    left: 8%;
+    width: 80px;
+  }
+  .floating_3 {
+    top: 70px;
+    right: 25%;
+    width: 105px;
+  }
+  .balloon_1 img {
+    width: 50px;
+    animation: 20s floatUpTop 1s ease-in-out infinite;
+  }
+  .balloon_2 {
+    width: 80px;
+    animation: 25s floatUpMiddle 0.5s ease-in-out infinite;
+  }
+  .balloon_3 {
+    width: 80px;
+    animation: 30s floatUpBottom 1.5s ease-in-out infinite;
+  }
+  .balloon_4 {
+    width: 50px;
+    animation: 40s floatUpBottom 2s ease-in-out infinite;
+  }
+  .balloon_5 {
+    width: 70px;
+    animation: 40s floatUpBottom 2.5s ease-in-out infinite;
+  }
+  .balloon_6 {
+    width: 70px;
+    animation: 35s floatUpMiddle 2s ease-in-out infinite;
+  }
+  .balloon_7 {
+    width: 70px;
+    animation: 40s floatUpBottom 3.5s ease-in-out infinite;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .access__item__left {
+    .schedule__table {
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      tr {
+        &:nth-child(2) {
+          td {
+            padding: 10px 0;
+          }
+          th {
+            padding: 5px 3px;
+          }
+        }
+        &:nth-child(3) {
+          td {
+            padding: 10px 0;
+          }
+          th {
+            padding: 5px 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .title {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .news__contents {
+    .news__list {
+      em {
+        width: 190px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .feature__item {
+    height: 650px;
+    .feature__box {
+      top: 100px;
+      max-height: 700px;
+      height: 550px;
+    }
+    .feature__img {
+      width: 90%;
+    }
+  }
+  .medical__list {
+    .medical__item {
+      width: 200px;
+    }
+  }
+  .greeting__item {
+    height: 1120px;
+    .greeting__img img {
+      height: 300px;
+    }
+    .greeting__textbox {
+      top: 220px;
+    }
+  }
+  .access__item__left {
+    .schedule__table {
+      font-size: 1rem;
+    }
+  }
+  .access__item__right {
+    .access__guide {
+      font-size: 1.4rem;
+    }
+  }
+  .footer__flex__item {
+    .footer__nav__medical__list {
+      gap: 10px 30px;
+      li {
+        min-width: calc((100% - 50px) / 2);
+      }
+    }
+  }
+  .floating_1 {
+    top: 10px;
+    left: 8%;
+    width: 70px;
+  }
+  .floating_2 {
+    top: 10px;
+    left: 8%;
+    width: 70px;
+  }
 }
