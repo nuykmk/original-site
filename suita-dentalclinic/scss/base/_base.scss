@@ -1,0 +1,74 @@
+@use '../globals' as *;
+
+img {
+  max-width: 100%;
+}
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  font-family: $fontSecondary;
+  color: $cSub;
+  & p {
+    line-height: 3rem;
+  }
+}
+
+.header,
+.main,
+.footer {
+  max-width: 3000px;
+}
+.title {
+  font-family: $fontPrimary;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  position: relative;
+  z-index: 500;
+  @include mq(lg) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include mq(ssm) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.heading {
+  color: $cMain;
+  font-size: 8rem;
+  @include mq(lg) {
+    font-size: 6.4rem;
+  }
+  @include mq(md) {
+    font-size: clamp(2.2rem, 14.9vw, 6rem);
+  }
+}
+.lead {
+  font-size: 2.4rem;
+  @include mq(lg) {
+    font-size: 2rem;
+  }
+  @include mq(md) {
+    font-size: clamp(1rem, 4.9vw, 2rem);
+  }
+}
+.flex__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  @include mq(lg) {
+    padding: 0 10%;
+  }
+  @include mq(md) {
+    padding: 0 5%;
+  }
+}

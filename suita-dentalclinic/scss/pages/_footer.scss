@@ -1,0 +1,101 @@
+@use '../globals' as *;
+
+.footer {
+  font-family: 'Yusei Magic', serif;
+  color: #fff;
+  position: relative;
+
+  .footer__nav {
+    font-size: 1.8rem;
+    background-image: url(../img/bgi_suisai3.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding: 60px 8%;
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
+  }
+  .footer__end {
+    background-color: #45afd8;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 20px 0;
+  }
+}
+.footer__flex__item {
+  justify-content: space-around;
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+.footer__nav__left {
+  width: 22%;
+  @include mq(md) {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  li {
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.footer__nav__medical {
+  width: 78%;
+  display: flex;
+  @include mq(md) {
+    width: 100%;
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+}
+.footer__nav__medical_item {
+  width: 50%;
+  padding-left: 40px;
+  @include mq(xl) {
+    width: 75%;
+  }
+  @include mq(lg) {
+    width: 100%;
+  }
+  @include mq(md) {
+    padding-left: 0;
+  }
+  p {
+    margin-bottom: 15px;
+  }
+}
+.footer__nav__medical__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  @include mq(xl) {
+    gap: 10px 40px;
+  }
+  @include mq(md) {
+    width: 100%;
+    padding-left: 15px;
+    gap: 10px 50px;
+  }
+  @include mq(ssm) {
+    gap: 10px 30px;
+  }
+}
+.footer__nav__medical__list > li {
+  min-width: calc((100% - 10px) / 2);
+  margin-bottom: 10px;
+  @include mq(xl) {
+    min-width: calc((100% - 150px) / 2);
+    margin-bottom: 10px;
+  }
+  @include mq(md) {
+    min-width: calc((100% - 80px) / 2);
+  }
+  @include mq(ssm) {
+    min-width: calc((100% - 50px) / 2);
+  }
+}
